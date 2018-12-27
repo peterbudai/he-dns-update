@@ -6,15 +6,23 @@ It tries to remain minimal in terms of prerequisites to make it usable on variou
 
 ## Quick start guide
 
-_Step 1._ Clone this repository:
+_Step 1._ Download the source code of the [latest release](https://github.com/peterbudai/he-dns-update/releases/latest).
 
-    git clone git@github.com:peterbudai/he-dns-update.git
+_Step 2._ Unzip it.
 
-_Step 2._ Edit the provided example configuration file ([`dns-update.conf`](dns-update.conf)) and fill it with your hostnames and dynamic DNS entry keys.
+    tar xzf he-dns-update-<version>.tar.gz
 
-_Step 3._ Run the utility:
+_Step 3._ Edit the provided example configuration file ([`dns-update.conf`](dns-update.conf)) and fill it with your hostnames and dynamic DNS entry keys.
+
+_Step 4._ Run the utility.
 
     ./dns-update.sh
+
+### Using Git
+
+Alternatively, you can clone this repository directly via Git to obtain the latest version. So, instead of _Step 1 and 2_ above, run the following command.
+
+    git clone git@github.com:peterbudai/he-dns-update.git
 
 ## Configuration
 
@@ -35,7 +43,7 @@ You can always run the script manually, which will immediately try to update all
 
     ./dns-update.sh
 
-You can use this option to test your configuration. To get more feedback in case of an error, specify the `-v` or `--verbose` flag when running:
+You can use this option to test your configuration. To get more feedback in case of an error, specify the `-v` or `--verbose` flag when running.
 
     ./dns-update.sh -v
 
@@ -43,7 +51,7 @@ You can use this option to test your configuration. To get more feedback in case
 
 I suggest adding this script to your `crontab`. This way it will be run at regular intervals and will always keep your IP address up to date.
 
-An example cron configuration that runs the update every 15 minutes would look like the following (in this case the script and the config file is copied to the `/etc/cron.d` directory):
+An example cron configuration that runs the update every 15 minutes would look like the following (in this case the script and the config file is copied to the `/etc/cron.d` directory).
 
     */15 * * * *    root    /etc/cron.d/dns-update
 
