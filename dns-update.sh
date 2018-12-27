@@ -5,7 +5,6 @@
 #
 # (c) Peter Budai, 2018
 # https://peterbudai.eu/
-#
 
 # Global variables
 # Full path to the executing script file
